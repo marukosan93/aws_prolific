@@ -1,0 +1,304 @@
+{
+"Scenarios_DB_credibility": [
+{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"209"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"0"},
+"HIT_shares": {"S":"30"},
+"HIT_profilepic": {"S":"CFD-AM-241-287-N.jpg"},
+"HIT_profession": {"S":"Cook"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"580"},
+"HIT_healthclaim": {"S":"Yoghurt helps reduce food intake without feeling hungry, because it contains added fibres"},
+"HIT_likes": {"S":"57"},
+"HIT_shares": {"S":"0"},
+"HIT_profilepic": {"S":"CFD-AF-213-126-N.jpg"},
+"HIT_profession": {"S":"Professor"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"161"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"5700"},
+"HIT_shares": {"S":"30"},
+"HIT_profilepic": {"S":"CFD-AF-223-183-N.jpg"},
+"HIT_profession": {"S":"Nurse"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"47"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"0"},
+"HIT_shares": {"S":"30"},
+"HIT_profilepic": {"S":"CFD-WM-204-031-N.jpg"},
+"HIT_profession": {"S":"Nurse"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"88"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"5700"},
+"HIT_shares": {"S":"0"},
+"HIT_profilepic": {"S":"CFD-BF-224-002-N.jpg"},
+"HIT_profession": {"S":"Nurse"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"144"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"5700"},
+"HIT_shares": {"S":"3600"},
+"HIT_profilepic": {"S":"CFD-BM-230-232-N.jpg"},
+"HIT_profession": {"S":"Cook"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"354"},
+"HIT_healthclaim": {"S":"Yoghurt keeps you active and going for longer, because it contains slow-release carbohydrates"},
+"HIT_likes": {"S":"0"},
+"HIT_shares": {"S":"3600"},
+"HIT_profilepic": {"S":"CFD-BM-230-232-N.jpg"},
+"HIT_profession": {"S":"Cook"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"40"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"57"},
+"HIT_shares": {"S":"0"},
+"HIT_profilepic": {"S":"CFD-WM-258-125-N.jpg"},
+"HIT_profession": {"S":"Professor"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"43"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"5700"},
+"HIT_shares": {"S":"0"},
+"HIT_profilepic": {"S":"CFD-WM-258-125-N.jpg"},
+"HIT_profession": {"S":"Professor"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"168"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"57"},
+"HIT_shares": {"S":"3600"},
+"HIT_profilepic": {"S":"CFD-AF-236-145-N.jpg"},
+"HIT_profession": {"S":"Social Media Health Influencer"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"539"},
+"HIT_healthclaim": {"S":"Yoghurt helps reduce food intake without feeling hungry, because it contains added fibres"},
+"HIT_likes": {"S":"5700"},
+"HIT_shares": {"S":"30"},
+"HIT_profilepic": {"S":"CFD-BF-251-211-N.jpg"},
+"HIT_profession": {"S":"Cook"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"449"},
+"HIT_healthclaim": {"S":"Yoghurt helps reduce food intake without feeling hungry, because it contains added fibres"},
+"HIT_likes": {"S":"5700"},
+"HIT_shares": {"S":"30"},
+"HIT_profilepic": {"S":"CFD-WF-221-005-N.jpg"},
+"HIT_profession": {"S":"Nurse"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"550"},
+"HIT_healthclaim": {"S":"Yoghurt helps reduce food intake without feeling hungry, because it contains added fibres"},
+"HIT_likes": {"S":"0"},
+"HIT_shares": {"S":"0"},
+"HIT_profilepic": {"S":"CFD-BM-252-161-N.jpg"},
+"HIT_profession": {"S":"Nurse"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"532"},
+"HIT_healthclaim": {"S":"Yoghurt helps reduce food intake without feeling hungry, because it contains added fibres"},
+"HIT_likes": {"S":"0"},
+"HIT_shares": {"S":"0"},
+"HIT_profilepic": {"S":"CFD-BF-251-211-N.jpg"},
+"HIT_profession": {"S":"Cook"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"643"},
+"HIT_healthclaim": {"S":"Yoghurt helps reduce food intake without feeling hungry, because it contains added fibres"},
+"HIT_likes": {"S":"57"},
+"HIT_shares": {"S":"0"},
+"HIT_profilepic": {"S":"CFD-AM-241-287-N.jpg"},
+"HIT_profession": {"S":"Cook"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"77"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"57"},
+"HIT_shares": {"S":"30"},
+"HIT_profilepic": {"S":"CFD-BF-202-109-N.jpg"},
+"HIT_profession": {"S":"Professor"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"489"},
+"HIT_healthclaim": {"S":"Yoghurt helps reduce food intake without feeling hungry, because it contains added fibres"},
+"HIT_likes": {"S":"0"},
+"HIT_shares": {"S":"3600"},
+"HIT_profilepic": {"S":"CFD-WM-221-091-N.jpg"},
+"HIT_profession": {"S":"Social Media Health Influencer"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"151"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"5700"},
+"HIT_shares": {"S":"0"},
+"HIT_profilepic": {"S":"CFD-AF-213-126-N.jpg"},
+"HIT_profession": {"S":"Professor"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"357"},
+"HIT_healthclaim": {"S":"Yoghurt keeps you active and going for longer, because it contains slow-release carbohydrates"},
+"HIT_likes": {"S":"57"},
+"HIT_shares": {"S":"3600"},
+"HIT_profilepic": {"S":"CFD-BM-230-232-N.jpg"},
+"HIT_profession": {"S":"Cook"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"267"},
+"HIT_healthclaim": {"S":"Yoghurt keeps you active and going for longer, because it contains slow-release carbohydrates"},
+"HIT_likes": {"S":"57"},
+"HIT_shares": {"S":"3600"},
+"HIT_profilepic": {"S":"CFD-WM-204-031-N.jpg"},
+"HIT_profession": {"S":"Nurse"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"11"},
+"HIT_healthclaim": {"S":"Yoghurt helps you build resistance to common diseases, because it contains probiotics"},
+"HIT_likes": {"S":"0"},
+"HIT_shares": {"S":"30"},
+"HIT_profilepic": {"S":"CFD-WF-221-005-N.jpg"},
+"HIT_profession": {"S":"Nurse"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"404"},
+"HIT_healthclaim": {"S":"Yoghurt keeps you active and going for longer, because it contains slow-release carbohydrates"},
+"HIT_likes": {"S":"5700"},
+"HIT_shares": {"S":"30"},
+"HIT_profilepic": {"S":"CFD-AM-219-101-N.jpg"},
+"HIT_profession": {"S":"Professor"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"228"},
+"HIT_healthclaim": {"S":"Yoghurt keeps you active and going for longer, because it contains slow-release carbohydrates"},
+"HIT_likes": {"S":"0"},
+"HIT_shares": {"S":"3600"},
+"HIT_profilepic": {"S":"CFD-WF-221-005-N.jpg"},
+"HIT_profession": {"S":"Nurse"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"318"},
+"HIT_healthclaim": {"S":"Yoghurt keeps you active and going for longer, because it contains slow-release carbohydrates"},
+"HIT_likes": {"S":"0"},
+"HIT_shares": {"S":"3600"},
+"HIT_profilepic": {"S":"CFD-BF-251-211-N.jpg"},
+"HIT_profession": {"S":"Cook"}
+}
+}
+}
+,{
+"PutRequest": {
+"Item": {
+"HIT_scenarioID": {"S":"453"},
+"HIT_healthclaim": {"S":"Yoghurt helps reduce food intake without feeling hungry, because it contains added fibres"},
+"HIT_likes": {"S":"0"},
+"HIT_shares": {"S":"3600"},
+"HIT_profilepic": {"S":"CFD-WF-237-067-N.jpg"},
+"HIT_profession": {"S":"Social Media Health Influencer"}
+}
+}
+}
+]
+}

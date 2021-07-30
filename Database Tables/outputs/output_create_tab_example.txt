@@ -1,0 +1,113 @@
+Creating DB
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "Prolific_ID",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Workers_DB_example",
+        "KeySchema": [
+            {
+                "AttributeName": "Prolific_ID",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2021-07-14T08:26:59.778000+03:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 10,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Workers_DB_example",
+        "TableId": "db1d0558-8ffe-4bd2-8c10-52497219f89d"
+    }
+}
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "Batch_ID",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Batches_DB_example",
+        "KeySchema": [
+            {
+                "AttributeName": "Batch_ID",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2021-07-14T08:27:01.715000+03:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 10,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Batches_DB_example",
+        "TableId": "6adce0cb-b3cf-4b30-9149-0d914df6db22"
+    }
+}
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "UID",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Results_DB_example",
+        "KeySchema": [
+            {
+                "AttributeName": "UID",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2021-07-14T08:27:03.641000+03:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 10,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Results_DB_example",
+        "TableId": "b6a95dea-f34f-4f24-9cae-fb9ba9f28a31"
+    }
+}
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "HIT_scenarioID",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Scenarios_DB_example",
+        "KeySchema": [
+            {
+                "AttributeName": "HIT_scenarioID",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2021-07-14T08:27:05.637000+03:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 10,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Scenarios_DB_example",
+        "TableId": "d6f9157b-15f4-441c-96cc-7ffc689583b5"
+    }
+}

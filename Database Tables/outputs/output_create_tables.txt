@@ -1,0 +1,113 @@
+Creating DB
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "Prolific_ID",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Workers_DB_credibility",
+        "KeySchema": [
+            {
+                "AttributeName": "Prolific_ID",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2021-07-15T13:04:47.252000+03:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 10,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Workers_DB_credibility",
+        "TableId": "6c080078-7c71-44d4-a719-1c3f816588ef"
+    }
+}
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "Batch_ID",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Batches_DB_credibility",
+        "KeySchema": [
+            {
+                "AttributeName": "Batch_ID",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2021-07-15T13:04:48.946000+03:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 10,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Batches_DB_credibility",
+        "TableId": "453a134e-82f0-4444-8368-f15942d89eff"
+    }
+}
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "UID",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Results_DB_credibility",
+        "KeySchema": [
+            {
+                "AttributeName": "UID",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2021-07-15T13:04:50.607000+03:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 10,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Results_DB_credibility",
+        "TableId": "15366c9c-b757-46fb-8a32-a4d879bb0d28"
+    }
+}
+{
+    "TableDescription": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "HIT_scenarioID",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "Scenarios_DB_credibility",
+        "KeySchema": [
+            {
+                "AttributeName": "HIT_scenarioID",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "CREATING",
+        "CreationDateTime": "2021-07-15T13:04:52.330000+03:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 10,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Scenarios_DB_credibility",
+        "TableId": "dda776f1-4ea1-46e1-9643-ab851803537d"
+    }
+}
