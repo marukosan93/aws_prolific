@@ -39,7 +39,7 @@ python upload_scenarios.py scenarios.csv study_x
 After making these optional changes the script can be run, it requires 5 arguments:
 - .csv file name (e.g. scenarios.csv)
 - *studyname* (e.g. study_x)
-- number of batches, calculated a total scenarios/batch size (e.g. 72)
+- number of batches, calculated as total scenarios divided by batch size (e.g. 72)
 - number of repetions, how many times does each scenario need to be completed (e.g. 5)
 - adiacent sorting scheme, 1 if enabled (*item_weights* and *threshold* need setting), 0 if disabled (e.g. 1)
 
@@ -50,7 +50,7 @@ python randomize_batches.py scenarios.csv study_x 72 5 1
 ```
 
 ##### 5.  Completion code
-For this step the study needs to be set up on Prolific, so wait for that first. When it is set up on Prolific, add completion code for the study to the *completion_codes* table, easiest to do manually. Go to AWS DynamoDB insert new entry with *studyname* and corresponding completion code.
+For this step the study needs to be set up on Prolific, so wait for that first. When it is set up on Prolific, add completion code for the study to the *completion_codes* table, easiest to do manually. Go to AWS DynamoDB insert new entry with *studyname* and corresponding completion code in the *completion_codes* table.
 
 ### Front-end HTML
 
