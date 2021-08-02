@@ -7,7 +7,7 @@ Creating DB
                 "AttributeType": "S"
             }
         ],
-        "TableName": "Workers_DB_credibility",
+        "TableName": "Workers_DB_study_x",
         "KeySchema": [
             {
                 "AttributeName": "Prolific_ID",
@@ -15,7 +15,7 @@ Creating DB
             }
         ],
         "TableStatus": "CREATING",
-        "CreationDateTime": "2021-07-15T13:04:47.252000+03:00",
+        "CreationDateTime": "2021-08-02T13:38:25.231000+03:00",
         "ProvisionedThroughput": {
             "NumberOfDecreasesToday": 0,
             "ReadCapacityUnits": 10,
@@ -23,8 +23,8 @@ Creating DB
         },
         "TableSizeBytes": 0,
         "ItemCount": 0,
-        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Workers_DB_credibility",
-        "TableId": "6c080078-7c71-44d4-a719-1c3f816588ef"
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Workers_DB_study_x",
+        "TableId": "467eb216-e879-4026-babb-c8cafb58c60c"
     }
 }
 {
@@ -35,7 +35,7 @@ Creating DB
                 "AttributeType": "S"
             }
         ],
-        "TableName": "Batches_DB_credibility",
+        "TableName": "Batches_DB_study_x",
         "KeySchema": [
             {
                 "AttributeName": "Batch_ID",
@@ -43,7 +43,7 @@ Creating DB
             }
         ],
         "TableStatus": "CREATING",
-        "CreationDateTime": "2021-07-15T13:04:48.946000+03:00",
+        "CreationDateTime": "2021-08-02T13:38:26.941000+03:00",
         "ProvisionedThroughput": {
             "NumberOfDecreasesToday": 0,
             "ReadCapacityUnits": 10,
@@ -51,8 +51,8 @@ Creating DB
         },
         "TableSizeBytes": 0,
         "ItemCount": 0,
-        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Batches_DB_credibility",
-        "TableId": "453a134e-82f0-4444-8368-f15942d89eff"
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Batches_DB_study_x",
+        "TableId": "169011d7-635e-4879-a16c-839aba708223"
     }
 }
 {
@@ -63,7 +63,7 @@ Creating DB
                 "AttributeType": "S"
             }
         ],
-        "TableName": "Results_DB_credibility",
+        "TableName": "Results_DB_study_x",
         "KeySchema": [
             {
                 "AttributeName": "UID",
@@ -71,7 +71,7 @@ Creating DB
             }
         ],
         "TableStatus": "CREATING",
-        "CreationDateTime": "2021-07-15T13:04:50.607000+03:00",
+        "CreationDateTime": "2021-08-02T13:38:28.675000+03:00",
         "ProvisionedThroughput": {
             "NumberOfDecreasesToday": 0,
             "ReadCapacityUnits": 10,
@@ -79,8 +79,8 @@ Creating DB
         },
         "TableSizeBytes": 0,
         "ItemCount": 0,
-        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Results_DB_credibility",
-        "TableId": "15366c9c-b757-46fb-8a32-a4d879bb0d28"
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Results_DB_study_x",
+        "TableId": "da8a4d3c-7055-459f-a85a-d58d345fc221"
     }
 }
 {
@@ -91,7 +91,7 @@ Creating DB
                 "AttributeType": "S"
             }
         ],
-        "TableName": "Scenarios_DB_credibility",
+        "TableName": "Scenarios_DB_study_x",
         "KeySchema": [
             {
                 "AttributeName": "HIT_scenarioID",
@@ -99,7 +99,7 @@ Creating DB
             }
         ],
         "TableStatus": "CREATING",
-        "CreationDateTime": "2021-07-15T13:04:52.330000+03:00",
+        "CreationDateTime": "2021-08-02T13:38:30.428000+03:00",
         "ProvisionedThroughput": {
             "NumberOfDecreasesToday": 0,
             "ReadCapacityUnits": 10,
@@ -107,7 +107,7 @@ Creating DB
         },
         "TableSizeBytes": 0,
         "ItemCount": 0,
-        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Scenarios_DB_credibility",
-        "TableId": "dda776f1-4ea1-46e1-9643-ab851803537d"
+        "TableArn": "arn:aws:dynamodb:eu-north-1:694568542444:table/Scenarios_DB_study_x",
+        "TableId": "ea458685-93ec-427f-af24-7647dff6299d"
     }
 }

@@ -1,64 +1,84 @@
 import json
-import numpy as np
 import random
 import csv
 import sys
 import subprocess
+from math import ceil
 
 INPUT_FILE = sys.argv[1]  #CSV file to be used as input
 STUDY = sys.argv[2]  #Short string identifying the study in aws
 N_BATCHES = sys.argv[3] #Batch size, random shuffle works only with relatively small batches
 N_REPETITION = sys.argv[4] #How many times do the batches need to be completed?
-RESHUFFLE_IF_ADIACENT_SIMILAR = sys.argv[5] #Can be either 1 or 0, if 0 the batches are just randomly shuffled but closeby elements could be too similar, if 1 the reshuffling batches mechanism is implemented, but items_weights and threshold need to be set properly
+SORTING = sys.argv[5] #Can be either 1 or 0, if 0 the batches are just randomly sorted, if 1 batches are sorted uniformly (similar scenarios in batch are minimised)
 
 #item weights need to be set, the elements are all column of the csv except for the primarykey
 items_weights = [('HIT_profession',2),('HIT_healthclaim',2),('HIT_profilepic',2),('HIT_likes',1),('HIT_shares',1)]
 #If the summed weights are over the threshold it means that the two scenarios are similar
-threshold = 3
+threshold = 2
 
-#Primary key for the database, uniquely identifies the scenario, don't change otherwise back end won't work
+#Primary key for the database, uniquely identifies the scenario, don't change otherwise back-end won't work
 primary_key = 'HIT_scenarioID'
 
-#finds item in list of dictionaries based on key-value
-def find(lst, key, value):
-    for i, dic in enumerate(lst):
-        if dic[key] == value:
-            return int(i)
-    return -1
-
-#Computes a similarity score between two scenarios based on arbitrary weights and threshold
-def compute_similarity(item1_ind,item2_ind,scen_items):
-    item1 = scen_items[int(find(scen_items,primary_key,item1_ind))]
-    item2 = scen_items[int(find(scen_items,primary_key,item2_ind))]
+#Computes a similarity score between two scenarios based on weights
+def compute_similarity(scenario1,scenario2):
     similarity = 0
     for item_weight in items_weights:
-        if (item1[item_weight[0]] == item2[item_weight[0]]):
+        if (scenario1[item_weight[0]] == scenario2[item_weight[0]]):
             similarity+= item_weight[1]
-    if similarity > threshold:
-        return True
-    else:
-        return False
+    return similarity
 
-#Check if there are similar adiacent elements in list
-def detect_similar(hits_list,scen_items):
-    similar = False
-    for i in range(0,len(hits_list)-1):
-        if (compute_similarity(hits_list[i],hits_list[i+1],scen_items)):
-            similar = True
-    return similar
+#Sums the total similarity scores of a batch and scenario
+def calculate_similarity_score_batch_scen(scenario,batch):
+    if len(batch) == 0:
+        return 0
+    else:
+        total_similar = 0
+        for count, batch_scenario in enumerate(batch):
+            similarity = compute_similarity(scenario,batch_scenario)
+            if count == len(batch)-1:   #add higher weight for the last element, thus disencouraging subsequent elements from being too similar
+                similarity = 2*similarity
+            total_similar += similarity
+        return total_similar
 
 #Open the csv file as a list of dictionaries
 with open(INPUT_FILE, "r") as f:
     reader = csv.DictReader(f)
-    scen_items = list(reader)
+    scenarios = list(reader)
 
 number_batches = int(N_BATCHES)
+#randomly shuffles scenarios
+random.shuffle(scenarios)
+#makes sure batches are evenly sized
+max_batch_size = ceil(len(scenarios)/number_batches)
+#Splits scenarios in equal sized buckets (doesn't care about similarity)
+if int(SORTING) == 0:
+    #splits scenarios in batches
+    batches = [[] for x in range(number_batches)]
+    #distributes the scenarios in N_BATCHES evenly sized batches
+    for scenario in scenarios:
+        for batch in batches:
+            if len(batch) < max_batch_size:
+                batch.append(scenario)
+                score = calculate_similarity_score_batch_scen(scenario,batch)
+                break
 
-complete_list = np.arange(1,len(scen_items)+1)
-#randomly shuffles the scenarios
-np.random.shuffle(complete_list)
-#splits scenarios in batches
-batch_scenarios = np.array_split(complete_list, number_batches)
+#Splits scenarios in equal sized buckets with minimised similarity
+else:
+    if int(SORTING) == 1:
+        #Creates empty batches
+        batches = [[] for x in range(number_batches)]
+        for scenario in scenarios:
+            min_batch_score = sys.maxsize
+            candidate = None
+            for batch in batches:
+                if len(batch) < max_batch_size:
+                    score = calculate_similarity_score_batch_scen(scenario,batch)
+                    if score < min_batch_score:
+                        min_batch_score = score
+                        candidate = batch
+            candidate.append(scenario)
+    else:
+        print("SORTING agrument can be eiher 1 or 0")
 
 #elements to add to DB
 act = "0"
@@ -70,17 +90,14 @@ comp = "0"
 cmd1 = "aws dynamodb batch-write-item --request-items"
 cmd2 = "{\"Batches_DB_"+STUDY+"\": ["
 #For each batch an entry is added to the DB
-for count, batch in enumerate(batch_scenarios):
-    hits_list = list(map(str, batch.tolist()))
-    simile = True
-    if RESHUFFLE_IF_ADIACENT_SIMILAR == 1:
-        while (simile):
-            random.shuffle(hits_list)
-            simile = detect_similar(hits_list,scen_items)
+for count, batch in enumerate(batches):
+    if SORTING == 0:
+        batch = list(map(str, batch.tolist()))
     hits_parsed = ""
-    for hit in hits_list:
+    for scen in batch:
         hits_parsed += "{\"S\": \""
-        hits_parsed += str(hit)
+        hit = scen['HIT_scenarioID']
+        hits_parsed += hit
         hits_parsed += "\"},"
     put_req = "{\"PutRequest\": {\"Item\":{\"Batch_ID\": {\"S\": \""+str(bid)+"\"},\"approved\": {\"S\": \""+app+"\"},\"available\": {\"S\": \""+ava+"\"},\"active\": {\"S\": \""+act+"\"},\"completed\": {\"S\": \""+comp+"\"},\"HITs\": {\"L\": ["+hits_parsed[:-1]+"]}}}},"
     cmd2 += put_req
