@@ -62,10 +62,10 @@ The only thing that needs to be changed here is *const studyname* on line 21 by 
 
 ##### 2. Modify *input_data.js* and *output_data.js*  
 
-*input_data.js* and *output_data.js* contain two JSON objects, which contain the different scenario elements to be displayed and the worker responses. <br> In *input_data.js* add the database field name as name, and as type text or image (text for elements whose content is contained in innerHTML attribute and image for images that are uploaded somewhere on a website with the specified url). <br> In *output_data.js* define the outputs, name should be the the database field name and type can be text or anything else (text if the content is in the innerHTML attribute, anything else if the content is in the value attribute). <br>
+*input_data.js* and *output_data.js* contain two JSON objects, which contain the different scenario elements to be displayed and the worker responses. <br> In *input_data.js* add the database field name as name, and as type text or image (text for elements whose content is contained in innerHTML attribute and image for images that are uploaded somewhere with the specified url). <br> In *output_data.js* define the outputs, name should be the the database field name and type can be text or anything else (text if the content is in the innerHTML attribute, anything else if the content is in the value attribute). <br>
 It is enough to define what the inputs and outputs are, the web-app does the rest. An important thing is that the html elements that correspond to them need to have the id field set to the same name.
 
-##### 3. Modify main.html
+##### 3. Modify home.html
 
 It needs to be modified in order to show the specific scenario format from the new project.
 
