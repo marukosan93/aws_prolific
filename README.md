@@ -5,7 +5,7 @@
 This web-app was developed in order to deploy studies on the Prolific crowdsourcing platform. It is hosted on the amazon aws platform and supports deployment of similar projects. The back-end code (or serverless functions) is already setup and works across projects. What needs to be setup separately for each project are the database tables and HTML front-end code. This is done via the aws cli that needs to be installed and configured, and via bash shell scripts. To setup a new project you need to be working on a linux machine.
 
 ## Setup
-Three things need to be setup: database tables, HMTL front-end and Prolific project. Before moving on to each part, an important thing to remember is that each new project needs to be identified by a unique (one word) string, like "study_x" for example. Let's call this string *studyname*, it will need to be inserted during the creation of tables and also in index.html. This *studyname* is important because it tells the back-end which project is which.
+Three things need to be setup: database tables, HMTL front-end and Prolific project. Before moving on to each part, an important thing to remember is that each new project needs to be identified by a unique string, like "study_x" for example. Let's call this string *studyname*, it will need to be inserted during the creation of tables and also in index.html. This *studyname* is important because it tells the back-end which project is which.
 
 ### Database tables
 
