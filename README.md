@@ -32,16 +32,15 @@ python upload_scenarios.py scenarios.csv study_x
 
 ##### 4. Randomly shuffle batches
 
-**randomize_batches.py** is used to split the scenarios into random batches. Optionally a sorting scheme which prevents similar elements from being adjacent can be applied. Without the sorting scheme the script can run as is, with the sorting scheme enabled a couple of things need to be adapted to the new project:
-- *item_weights*: a list of tuples where each component of the scenario (except the primary key) is contained, needs to contain the names of the non primary key columns in the .csv. The second element in the tuple is an arbitrary weight assigned to each component of the scenario.
-- *threshold*: an arbitrary threshold, if the summed weights of identical items in subsequent scenarios are over the threshold then the batch is reshuffled. This way each batch will have subsequent scenarios that are not too similar (acceptable similarity depends on the weights and threshold)
+**randomize_batches.py** is used to split the scenarios into random evenly sizes batches. Optionally a sorting scheme which minimizes similarity between scenarios in the same batch can be applied. Without the sorting scheme the script can run as is, with the sorting scheme enabled the script needs to be adapted to the new project by changing:
+- *item_weights*: a list of tuples where each component of the scenario (except the primary key) is contained, needs to contain the names of the non primary key columns in the .csv. The second element in the tuple is an arbitrary weight assigned to each component of the scenario. Higher weights can be assigned to elements that are more relevant or they can all be of the same value.
 
-After making these optional changes the script can be run, it requires 5 arguments:
+It is recommended to use the optional sorting scheme, with just random shuffling workers might get unevenly distributed and repetitive scenarios. After making the optional changes the script can be run, it requires 5 arguments:
 - .csv file name (e.g. scenarios.csv)
 - *studyname* (e.g. study_x)
 - number of batches, calculated as total scenarios divided by batch size (e.g. 72)
 - number of repetions, how many times does each scenario need to be completed (e.g. 5)
-- adiacent sorting scheme, 1 if enabled (*item_weights* and *threshold* need setting), 0 if disabled (e.g. 1)
+- sorting scheme, 1 if enabled (*item_weights* needs setting), 0 if disabled (e.g. 1)
 
 Using the example arguments the script can be run as:
 

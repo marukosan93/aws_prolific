@@ -12,9 +12,7 @@ N_REPETITION = sys.argv[4] #How many times do the batches need to be completed?
 SORTING = sys.argv[5] #Can be either 1 or 0, if 0 the batches are just randomly sorted, if 1 batches are sorted uniformly (similar scenarios in batch are minimised)
 
 #item weights need to be set, the elements are all column of the csv except for the primarykey
-items_weights = [('HIT_profession',2),('HIT_healthclaim',2),('HIT_profilepic',2),('HIT_likes',1),('HIT_shares',1)]
-#If the summed weights are over the threshold it means that the two scenarios are similar
-threshold = 2
+items_weights = [('HIT_profession',1),('HIT_healthclaim',1),('HIT_profilepic',1),('HIT_likes',1),('HIT_shares',1)]
 
 #Primary key for the database, uniquely identifies the scenario, don't change otherwise back-end won't work
 primary_key = 'HIT_scenarioID'
