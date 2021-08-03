@@ -9,7 +9,7 @@ aws dynamodb create-table \
     --key-schema \
         AttributeName=Prolific_ID,KeyType=HASH \
 --provisioned-throughput \
-        ReadCapacityUnits=10,WriteCapacityUnits=5
+        ReadCapacityUnits=5,WriteCapacityUnits=5
         
 aws dynamodb create-table \
     --table-name "Batches_DB_"$STUDYNAME \
@@ -18,7 +18,7 @@ aws dynamodb create-table \
     --key-schema \
         AttributeName=Batch_ID,KeyType=HASH \
 --provisioned-throughput \
-        ReadCapacityUnits=10,WriteCapacityUnits=5
+        ReadCapacityUnits=5,WriteCapacityUnits=5
         
 aws dynamodb create-table \
     --table-name "Results_DB_"$STUDYNAME \
@@ -27,7 +27,7 @@ aws dynamodb create-table \
     --key-schema \
         AttributeName=UID,KeyType=HASH \
 --provisioned-throughput \
-        ReadCapacityUnits=10,WriteCapacityUnits=5        
+        ReadCapacityUnits=5,WriteCapacityUnits=5        
         
 aws dynamodb create-table \
     --table-name "Scenarios_DB_"$STUDYNAME \
@@ -36,5 +36,5 @@ aws dynamodb create-table \
     --key-schema \
         AttributeName=HIT_scenarioID,KeyType=HASH \
 --provisioned-throughput \
-        ReadCapacityUnits=10,WriteCapacityUnits=5        
+        ReadCapacityUnits=5,WriteCapacityUnits=5        
         
