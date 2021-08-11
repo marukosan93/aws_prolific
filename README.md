@@ -27,7 +27,7 @@ It needs the unique study identifier string as an argument. Let's suppose it's c
 **upload_scenarios.py** is used to upload the data from the scenarios .csv file to the Scenarios_DB table, it takes the .csv and unique study identifier as arguments. For example, having *studyname* and "scenarios.csv", run:
 
 ```bash
-python upload_scenarios.py scenarios.csv study_x
+python upload_scenarios.py scenarios.csv studyname
 ```
 
 ##### 4. Randomly shuffle batches
