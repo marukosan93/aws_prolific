@@ -54,7 +54,7 @@ For this step the study needs to be set up on Prolific, so wait for that first. 
 ##### 6. AWS DynamoDB pricing
 A thing to watch out for is the free tier limits on DynamoDB, 25 WCUs and 25 RCUs of provisioned capacity. With 5 Tables at 5 Read and 5 Write Units each it's fine. When setting up a new project either change the capacity so that the sum of the Read/Write capacities of all tables is 25, or delete the tables of the old project (except for  *completion_codes*).
 
-### Front-end HTML
+### Front-end 
 
 After setting up the tables, next step is the front-end. The most important things is to keep the names consistent, an element needs to have the same name in the databases, html id tag and in *input_data.js*/*output_data.js*. For example "Field1" needs to be called "Field1" in the Scenarios_DB, the HMTL element which displays it's value needs to have "Field1" as the id tag, and in *input_data.js* the JSON object needs to have a variable called "Field1" with a type.
 
