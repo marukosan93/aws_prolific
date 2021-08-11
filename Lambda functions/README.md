@@ -1,3 +1,3 @@
 # Lambda Functions
 
-This is a backup of the Lambda function running on AWS
+This is a backup of the Lambda functions running on AWS
